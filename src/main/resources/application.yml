@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: Eurekaserver
+  jpa:  
+    hibernate:
+      dialect: org.hibernate.dialect.MySQLDialect
+      ddl-auto: none
+      temp: 
+        use_jdbc_metadata_defaults: false
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3308/tp1database
+    username: myuser
+    password: Numsey@Password!
+    driver-class-name: com.mysql.cj.jdbc.Driver
+server:
+  port: 8761
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+logging:
+  level:
+    com.netflix.eureka: OFF
+    com.netflix.discovery: OFF
